@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <button class="button-finish" onclick="btnUpdate()">Clicking</button>
+    <button class="addtocart-button" onclick="addToCart()">Add To Cart</button>
+    <p class="added"></p>
+    <script>
+        //12a
+       const add = function(){
+        console.log(2+3);
+        
+       }
+       add(); 
+       add(); 
+       //12b
+
+       function run(twice){
+        twice();
+        twice();
+       }
+       run(function(){
+        console.log("!12a")
+       })
+       run(add);
+
+
+       //12c,d
+       function btnUpdate(){
+       const button = document.querySelector(".button-finish")
+       button.innerHTML = "Loding...."
+       setTimeout(() => {
+        button.innerHTML = "Finished"
+       } , 1000)
+       }
+
+
+       //12e
+       function addToCart(){
+        const Cart = document.querySelector(".added");
+        Cart.innerHTML = "Added";
+
+        setTimeout(() =>{
+            Cart.innerHTML = ""
+        } , 1000)
+       }
+
+       //12f
+       setInterval(function(){
+        if(document.title === "App"){
+            document.title === "(2) New Messages"
+
+        } else{
+         document.title = "App";
+        }
+       } , 1000 );
+
+       //
+
+       
+
+
+    </script>
+</body>
+</html>

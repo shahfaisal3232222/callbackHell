@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amusement Park Discount Checker</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 30px;
+    }
+    input, button {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Amusement Park Discount Checker</h2>
+
+  <label for="ageInput">Enter your age:</label><br>
+  <input type="number" id="ageInput" /><br>
+  <button onclick="checkDiscount()">Check Discount</button>
+
+  <div id="result"></div>
+
+  <script>
+    function checkDiscount() {
+      let age = Number(document.getElementById("ageInput").value);
+      let result = "";
+
+      if (age <= 6 || age >= 65) {
+        result = "Discount";
+      }
+      else if (age>=101){
+        alert("You Enter wrong Age")
+      }
+       else {
+        result = "No discount";
+      }
+
+      document.getElementById("result").textContent = result;
+    }
+  </script>
+
+</body>
+</html>

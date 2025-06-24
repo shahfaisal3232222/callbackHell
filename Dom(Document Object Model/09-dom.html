@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <button>Hello</button>
+    <button class="js-2nbutton">Secondbutton</button>
+    
+    <script>
+       /* document.body.innerHTML = `<button>Click here</button>`
+        console.log(document.body.innerHTML)
+        document.body.innerHTML = 'changed'*/
+
+
+
+        // document.querySelector ---> lets get us any element from the web page and put it inside the javaScript
+        console.log(document.querySelector('button')
+            .innerHTML = 'changed');
+        const buttonElemnet = document.querySelector('.js-2nbutton');
+        console.log()   
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and loops</title>
+</head>
+<body>
+    <script>
+
+    //     const myArray = [20,30,40]
+    //     console.log('myArray: ', myArray);
+    //     console.log(myArray[0]);
+    //     myArray[0] = 99;
+    //     console.log('myArray: ', myArray);
+
+    //    [1,'hello',true,{name:'socks'},[1,2]];
+    //    console.log(typeof[1,2])
+    //    console.log(Array.isArray([1,2]))
+    //    console.log(myArray.length)
+
+    //    myArray.push(100);
+    //    console.log('myArray: ', myArray);
+    //    myArray.splice(0,2)
+    //    console.log('myArray: ', myArray);
+
+    //    Loops
+    // let i = 1;
+    // while (i <= 5) {
+    // console.log(i)
+    // i +=1;
+    // }
+    // For Loop
+    // for (i = 0; i<=5 ; i++){
+    //     console.log(i)
+    // }
+    //arrays through looping
+    // we calculate the numbers of the arrays so there is used accumulator 
+    // we have to used the Accumulator pattern
+    // 1- we create the variable to store the result
+    // 2- loop through the array and update the result
+
+    // const num = [1,1,3];
+    // let total = 0;
+    // for (let i = 0; i < num.length; i++){
+    //   const nums = num[i];
+    //   total += nums;
+    // }
+    // console.log(total);
+    
+    //looping through array
+    //means when we get the values in the array throuh loop 
+    /*const todoList = ['sdkjaskl','sdhasjk','dsdhsjjksad'];
+    for(let i = 0; i < todoList.length; i++){
+       const value = todoList[i]
+       console.log('value: ', value);
+    };*/
+
+    // Accumulator Pattern
+    // two steps--> first create total variable and 2--> looping through array
+
+    const nums = [1,1,6];
+    let total = 0;
+    for(let i = 0; i<nums.length; i++){
+        const num = nums[i]
+        total+= num; //actual value
+        total += num * 2;//when we double it
+    };
+    console.log(total);
+
+    </script>
+</body>
+</html>

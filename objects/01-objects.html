@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <h1>Objects In javaScript</h1>
+    <script>
+        // const product = {
+        //     name: "rock",
+        //     price: 1090
+        // }
+        // console.log(product)
+        // console.log(product.name)
+        // console.log(product.price)
+
+        // product.name = "rockpaper"
+        // console.log(product)
+
+        // product.newproperty = true;
+        // console.log(product);
+
+        // delete product.newproperty;
+        // console.log(product);
+
+        const product2 = {
+            name: "shirt",
+            'deliverytime': 'one day',
+            rating:{
+                stars: 0.4,
+                count: 87,
+            },
+            fun: function function1(){
+                console.log("inside object function")
+            }
+            
+        }
+        console.log(product2);
+        console.log(product2.name);
+        console.log(product2['deliverytime']);
+        console.log(product2.rating);
+        console.log(product2.rating.stars);
+        product2.fun();
+
+        console.log(typeof console.log); //Actullay console is an object provided in javascript and .log is an function means .log is stored inside object so this is called method and also this built in methods
+
+        // there are another two bulit in methods provided by javaScript
+        // 1) JSON --> javascript object notation
+        // 2) localStorage
+
+        console.log(JSON.stringify(product2)) // so this method will converd the javascript object into jsonformat
+        const stringback = JSON.stringify(product2);
+        console.log(JSON.parse(JSON.stringify(product2))) // so method will be used in this time jsonformat converted into objects form
+        
+
+        const object1 = {
+            message: "good job"
+        }
+        console.log(object1)
+        object1.message = "good morning";
+        console.log('object1: ', object1);
+        const object2 = object1;
+
+
+        console.log(object1)
+        console.log(object2)
+        
+        const object3 = {
+            message: "good morning"
+        };
+        
+        console.log(object1 === object3)
+        console.log(object1 === object2) 
+
+
+
+        //destructuring  is an easier way to take property out of an object
+        const object4 = {
+            message:"good job",
+            price: 50
+        }
+        const {message,price} = object4;
+        console.log(message);
+        console.log(price);
+
+        // shorthand property
+        const object5 = {
+            message: message
+        };
+        console.log(object5)
+        
+
+
+        
+
+        
+
+
+    </script>
+</body>
+</html>

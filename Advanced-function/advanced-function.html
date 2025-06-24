@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Function</title>
+</head>
+<body>
+    <script>
+       /* function param(param){
+           param()
+        }
+        param( function(){
+            console.log("hello")
+        })
+
+        const object1 = {
+            fun: function greet(){
+                console.log("hello2")
+            }
+        }
+        object1.fun();
+
+       setTimeout(function(){
+        console.log("setTimeout");
+        
+       } , 3000)
+
+       console.log("next line")*/
+
+    //    .forEach --> it is a cleaner version looping through array
+       ["watch youtube","wash clothes","theater"].forEach(function(value,index){
+        if(value === "wash clothes"){
+            return;
+
+        }
+        console.log(index);
+        console.log(value);
+        });
+
+        //.filter() -->
+
+      const arr1 =  [1,-3,5].filter((item) =>{
+    //   if(item >= 0){
+    //     return true;
+    //   } else {
+    //     return false;
+    //   }
+    return item >= 0
+        });
+        console.log(arr1);
+
+
+    // .map()
+    // .map reseive two parameters (values,index)
+    const maped = [1,1,3].map((value , index) =>{
+     return value * 2;
+    }) 
+    console.log(maped);
+    //End
+
+    //shurtcut of arrow function
+      const num = [1,1,3].map(value => value * 2);
+      console.log(num);//this is called compact code clean and easy to red.
+
+
+    // closure
+    // 
+         
+     
+    
+       
+    </script>
+</body>
+</html>

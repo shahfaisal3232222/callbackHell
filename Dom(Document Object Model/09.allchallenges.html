@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript</title>
+    <style>
+        .js-head-button{
+            background-color: darkkhaki;
+            text-decoration: none;
+            padding: 10px;
+            border: 0px;
+            border-radius: 5px;
+        }
+        .js-head-button:hover{
+            color: rgb(160, 16, 16);
+            transition: 1s ease-in-out;
+            box-shadow: 3px rgb(46, 29, 7);
+            transform: rotate(border-radius);
+        }
+    </style>
+</head>
+<body>
+    <button onclick="fun1()" class="js-head-button">Heads</button>
+    <button onclick="fun2()" class="js-tail-button">Tails</button>
+    <h3 class="js-show-head"></h3>
+    <!-- challenge no2 -->
+     <input class="js-inputfield" placeholder="Enter Your Name" onkeyup="handleonkeyup(event)">
+     <button onclick="fun3()" class="js-submit-button">Submit</button>
+     <p class="js-inputName"></p>
+    <script>
+     function fun1(){
+       const head = document.querySelector('.js-head-button');
+       let headCall = head.innerText;
+       if(headCall === 'Heads'){
+        document.querySelector('.js-show-head').innerHTML = `Choice you ${headCall}`;
+       }
+     };
+     function fun2(){
+       const tail = document.querySelector('.js-tail-button');
+       let tailCall = tail.innerText;   
+       if(tailCall === 'Tails'){
+        document.querySelector('.js-show-head').innerHTML = `You choice ${tailCall}`;
+       }
+       };
+       //challenge no2
+       function fun3(){
+          const input = document.querySelector('.js-inputfield');
+          let inputCall = input.value;
+          document.querySelector('.js-inputName').innerHTML = `Your Name is : ${inputCall}`
+
+       }
+       function handleonkeyup(event){
+        if(event.key === 'Enter'){
+            fun3();
+        }
+       }
+
+
+    </script>
+</body>
+</html>
